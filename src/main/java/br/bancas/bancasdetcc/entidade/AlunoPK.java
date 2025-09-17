@@ -10,8 +10,11 @@ import java.util.Objects;
 
 @Embeddable
 public class AlunoPK implements Serializable {
+    @Column(name = "primeiro_numero",nullable = false)
     private Long idNum_1;
+    @Column(name = "segundo_numero",nullable = false)
     private Long idNum_2;
+    @Column(name = "terceiro_numero",nullable = false)
     private Long idNum_3;
 
     AlunoPK(){
