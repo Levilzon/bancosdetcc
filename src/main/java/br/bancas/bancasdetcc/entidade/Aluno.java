@@ -6,9 +6,8 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "tb_aluno")
 public class Aluno {
-    private int matriculaNum_1;
-    private int matriculaNum_2;
-    private int matriculaNum_3;
+
+    private AlunoPK id;
     private String nome;
     private String curso;
     private int semestre;
@@ -16,32 +15,18 @@ public class Aluno {
     public Aluno(){
 
     }
-    public Aluno(int matriculaNum1, int matriculaNum_2, int matriculaNum_3, String nome, String curso, int semestre){
-        this.matriculaNum_1 = matriculaNum_1;
-        this.matriculaNum_2 = matriculaNum_2;
-        this.matriculaNum_3 = matriculaNum_3;
+    public Aluno(AlunoPK id, String nome, String curso, int semestre){
+        this.id = id;
         this.nome = nome;
         this.curso = curso;
         this.semestre = semestre;
     }
 
-    public int getMatriculaNum_1(){
-        return matriculaNum_1;
+    public AlunoPK getAlunoPK(){
+        return id;
     }
-    public void setMatriculaNum_1(int matriculaNum_1){
-        this.matriculaNum_1 = matriculaNum_1;
-    }
-    public int getMatriculaNum_2(){
-        return matriculaNum_2;
-    }
-    public void setMatriculaNum_2(int matriculaNum_2){
-        this.matriculaNum_2 = matriculaNum_2;
-    }
-    public int getMatriculaNum_3(){
-        return matriculaNum_3;
-    }
-    public void setMatriculaNum_3(int matriculaNum_3){
-        this.matriculaNum_3 = matriculaNum_3;
+    public void setAlunoPK(AlunoPK id){
+        this.id = id;
     }
     public String getNome(){
         return nome;
@@ -62,3 +47,6 @@ public class Aluno {
         this.semestre = semestre;
     }
 }
+
+
+
