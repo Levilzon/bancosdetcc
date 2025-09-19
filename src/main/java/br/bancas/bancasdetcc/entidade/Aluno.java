@@ -1,12 +1,13 @@
 package br.bancas.bancasdetcc.entidade;
 
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_aluno")
 public class Aluno {
-
+    @EmbeddedId
     private AlunoPK id;
     private String nome;
     private String curso;
