@@ -1,7 +1,6 @@
 package br.bancas.bancasdetcc.servicos;
 
 import br.bancas.bancasdetcc.entidade.Aluno;
-import br.bancas.bancasdetcc.entidade.AlunoPK;
 import br.bancas.bancasdetcc.repositorio.AlunoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
