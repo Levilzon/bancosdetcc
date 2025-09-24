@@ -1,0 +1,1 @@
+INSERT INTO tb_aluno(nome, curso, semestre) VALUES('João Pestana', 'Engenharia Civil', 8);
