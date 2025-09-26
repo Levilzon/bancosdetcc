@@ -1,1 +1,6 @@
-INSERT INTO tb_aluno(nome, universidade, estado, curso, tema, semestre) VALUES('João Pestana', 'UFR', 'Bahia','Engenharia Civil', 'A importancia do tijolo', 8);
+INSERT INTO tb_aluno(nome, universidade, estado, curso, tema, semestre) VALUES('João Pestana', 'UFBA', 'Bahia','Engenharia Civil', 'A importancia do tijolo', 8);
+INSERT INTO tb_aluno(nome, universidade, estado, curso, tema, semestre) VALUES('Maria José', 'UERN', 'Rio Grande do Norte', 'Cientista de dados','O quão bunda é a programação da riot', 5);
+INSERT INTO tb_aluno(nome, universidade, estado, curso, tema, semestre) VALUES('Cauã Broken-head da Silva', 'UFC', 'Ceará', 'Ciências da computação', 'Descontinualidade de softwares com a evolução dos hardwares na sociedade contemporânea', 6);
+INSERT INTO tb_aluno(nome, universidade, estado, curso, tema, semestre) VALUES('Laura Alice', 'UFPA', 'Pará', 'Artes', 'O impacto das manualidades de regulação da ansiedade: perspectiva de práticas artesanais na contemporaneidade', 6);
+INSERT INTO tb_aluno(nome, universidade, estado, curso, tema, semestre) VALUES('Laura Melada', 'UFPA', 'Pará', 'Sociologia', 'a semelhança física nos casais e a sua correlação com o narcisismo', 5);
+INSERT INTO tb_aluno(nome, universidade, estado, curso, tema, semestre) VALUES('Melo Laura', 'UFPA', 'Pará', 'Jornalismo', 'Compreendendo o conceito de vontade em Arthur Schopenhauer a partir do tapão que o macaco Xico da novela Caras e bocas deu no diretor Jorge Fernando', 7);
