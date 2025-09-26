@@ -11,20 +11,24 @@ public class Aluno{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    //@Column(name = "nome_aluno")
+
     private String nome;
-    //@Column(name = "curso_aluno")
+    private String universidade;
+    private String estado;
     private String curso;
-    //@Column(name = "aluno_semestre")
+    private String tema;
     private int semestre;
 
     public Aluno(){
 
     }
-    public Aluno(Long id, String nome, String curso, int semestre){
+    public Aluno(Long id, String nome, String universidade, String estado, String curso, String tema, int semestre){
         this.id = id;
         this.nome = nome;
+        this.universidade = universidade;
+        this.estado = estado;
         this.curso = curso;
+        this.tema = tema;
         this.semestre = semestre;
     }
 
@@ -40,11 +44,29 @@ public class Aluno{
     public void setNome(String nome){
         this.nome = nome;
     }
+    public String getUniversidade(){
+        return universidade;
+    }
+    public void setUniversidade(String universidade){
+        this.universidade = universidade;
+    }
+    public String getEstado(){
+        return estado;
+    }
+    public void setEstado(String estado){
+        this.estado = estado;
+    }
     public String getCurso(){
         return curso;
     }
     public void setCurso(String curso){
         this.curso = curso;
+    }
+    public String getTema(){
+        return tema;
+    }
+    public void setTema(String tema){
+        this.tema = tema;
     }
     public int getSemestre(){
         return semestre;
