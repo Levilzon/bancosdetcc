@@ -23,4 +23,9 @@ public class AlunoServicos {
         List<Aluno> result = alunoRepositorio.findAll();
         return result;
     }
+    public Aluno save(Aluno aluno){
+        return alunoRepositorio.save(aluno);
+    }
+
+
 }
