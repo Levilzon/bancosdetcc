@@ -5,11 +5,11 @@ import br.bancas.bancasdetcc.entidade.Aluno;
 import br.bancas.bancasdetcc.repositorio.AlunoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AlunoServicos {
@@ -23,6 +23,10 @@ public class AlunoServicos {
     }
     public List<Aluno>findAllAluno(){
         List<Aluno> result = alunoRepositorio.findAll();
+        return result;
+    }
+    public Optional<Aluno> pesquisarPorId(Long id){
+        Optional<Aluno> result = alunoRepositorio.findById(id);
         return result;
     }
     public Aluno save(Aluno aluno){

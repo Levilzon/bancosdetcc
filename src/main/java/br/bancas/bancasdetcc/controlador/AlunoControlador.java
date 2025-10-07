@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/v1")
@@ -28,6 +29,11 @@ public class AlunoControlador {
     @GetMapping("/infocompletoaluno")
     public List<Aluno>findAllAluno(){
         List<Aluno> result = alunoServicos.findAllAluno();
+        return result;
+    }
+    @GetMapping("/pesquisaraluno/{id}")
+    public Optional<Aluno> pesquisaEspecifica(@PathVariable Long id){
+        Optional<Aluno> result = alunoServicos.pesquisarPorId(id);
         return result;
     }
     @PostMapping("/cadastro")
