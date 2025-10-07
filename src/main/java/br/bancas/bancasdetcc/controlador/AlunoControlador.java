@@ -35,10 +35,14 @@ public class AlunoControlador {
         Aluno result = alunoServicos.save(aluno);
         return result;
     }
-    @PutMapping("/editarperfil{id}")
+    @PutMapping("/editarperfil/{id}")
     public Aluno alterarDados(@PathVariable Long id, @RequestBody Aluno aluno){
         aluno.setId(id);
         return alunoServicos.save(aluno);
+    }
+    @DeleteMapping("/deletar/{id}")
+    public void deletarAluno(@PathVariable Long id){
+        alunoServicos.deletarPorId(id);
     }
 }
 

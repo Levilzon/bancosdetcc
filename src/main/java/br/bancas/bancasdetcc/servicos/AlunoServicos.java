@@ -28,6 +28,8 @@ public class AlunoServicos {
     public Aluno save(Aluno aluno){
         return alunoRepositorio.save(aluno);
     }
-
+    public void deletarPorId(@PathVariable Long id){
+        alunoRepositorio.deleteById(id);
+    }
 
 }
