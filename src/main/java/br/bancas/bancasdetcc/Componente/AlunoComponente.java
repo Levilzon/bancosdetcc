@@ -1,5 +1,8 @@
 package br.bancas.bancasdetcc.Componente;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class AlunoComponente {
     private String mensagem;
 
