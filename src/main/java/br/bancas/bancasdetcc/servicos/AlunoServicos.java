@@ -1,5 +1,6 @@
 package br.bancas.bancasdetcc.servicos;
 
+import br.bancas.bancasdetcc.Componente.AlunoComponente;
 import br.bancas.bancasdetcc.DTO.AlunoDTO;
 import br.bancas.bancasdetcc.entidade.Aluno;
 import br.bancas.bancasdetcc.repositorio.AlunoRepositorio;
@@ -16,12 +17,15 @@ public class AlunoServicos {
     @Autowired
     private AlunoRepositorio alunoRepositorio;
 
-    public List<AlunoDTO>findInfoAluno(){
-        List<Aluno> result =alunoRepositorio.findAll();
+    @Autowired
+    private AlunoComponente alunoComponente;
+
+    public List<AlunoDTO>pesquisarInfoMinAlunos(){
+        List<Aluno> result = alunoRepositorio.findAll();
         List<AlunoDTO> dto = result.stream().map(x -> new AlunoDTO(x)).toList();
         return dto;
     }
-    public List<Aluno>findAllAluno(){
+    public List<Aluno>pesquisarTodosAlunos(){
         List<Aluno> result = alunoRepositorio.findAll();
         return result;
     }
@@ -29,7 +33,7 @@ public class AlunoServicos {
         Optional<Aluno> result = alunoRepositorio.findById(id);
         return result;
     }
-    public Aluno save(Aluno aluno){
+    public Aluno salvar(Aluno aluno){
         return alunoRepositorio.save(aluno);
     }
     public void deletarPorId(@PathVariable Long id){
