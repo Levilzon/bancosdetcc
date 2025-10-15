@@ -43,13 +43,15 @@ public class AlunoControlador {
         return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
     @PutMapping("/editarperfil/{id}")
-    public Aluno alterarDados(@PathVariable Long id, @RequestBody Aluno aluno){
+    public ResponseEntity<Aluno> alterarDados(@PathVariable Long id, @RequestBody Aluno aluno){
         aluno.setId(id);
-        return alunoServicos.salvar(aluno);
+        Aluno atualizar = alunoServicos.salvar(aluno);
+        return ResponseEntity.ok(atualizar);
     }
     @DeleteMapping("/deletar/{id}")
-    public void deletarAluno(@PathVariable Long id){
+    public ResponseEntity<?> deletarAluno(@PathVariable Long id){
         alunoServicos.deletarPorId(id);
+        return ResponseEntity.ok(id);
     }
 }
 
